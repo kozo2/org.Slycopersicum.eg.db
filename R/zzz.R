@@ -17,39 +17,26 @@ org.Slycopersicum.egORGANISM <- "Solanum lycopersicum"
     assign("dbconn", dbconn, envir=datacache)
 
     ## Create the OrgDb object
-    sPkgname <- sub(".db$","",pkgname)
-    db <- loadDb(system.file("extdata", paste(sPkgname,
-      ".sqlite",sep=""), package=pkgname, lib.loc=libname),
-                   packageName=pkgname)    
-    dbNewname <- AnnotationDbi:::dbObjectName(pkgname,"OrgDb")
-    ns <- asNamespace(pkgname)
-    assign(dbNewname, db, envir=ns)
-    namespaceExport(ns, dbNewname)
+##     sPkgname <- sub(".db$","",pkgname)
+##     db <- loadDb(system.file("extdata", paste(sPkgname,
+##       ".sqlite",sep=""), package=pkgname, lib.loc=libname),
+##                    packageName=pkgname)    
+##     dbNewname <- AnnotationDbi:::dbObjectName(pkgname,"OrgDb")
+##     ns <- asNamespace(pkgname)
+##     assign(dbNewname, db, envir=ns)
+##     namespaceExport(ns, dbNewname)
     
-    ## Create the AnnObj instances
-#    ann_objs <- createAnnObjs.SchemaChoice("ARABIDOPSIS_DB",
-#                                           "org.At.tair", "Arabidopsis", dbconn, datacache)
-    SOLANUM_DB_L2Rlink1 <- list(tablename="genes", Lcolname="gene_id", Rcolname="_id")
-    SOLANUM_DB_AnnDbBimap_seeds <- list(
-      list(
-        objName="CHR",
-        Class="AnnDbBimap",
-        L2Rchain=list(
-          SOLANUM_DB_L2Rlink1,
-          list(
-            tablename="gene_info",
-            Lcolname="_id",
-            Rcolname="chromosome"
-          )
-        )
-      )
-    )
-    
-    seed0 <- list(
-      objTarget="Solanum",
-      datacache=datacache
-    )
-    ann_objs <- AnnotationDbi:::createAnnDbBimaps(SOLANUM_DB_AnnDbBimap_seeds, seed0)
+##     ## Create the AnnObj instances
+## #    ann_objs <- createAnnObjs.SchemaChoice("ARABIDOPSIS_DB",
+## #                                           "org.At.tair", "Arabidopsis", dbconn, datacache)
+## #    SOLANUM_DB_L2Rlink1 <- list(tablename="genes", Lcolname="gene_id", Rcolname="_id")
+
+##     seed0 <- list(
+##       objTarget="Solanum",
+##       datacache=datacache
+##     )
+    ## ann_objs <- AnnotationDbi:::createAnnDbBimaps(SOLANUM_DB_AnnDbBimap_seeds, seed0)
+    ann_objs <- createAnnObjs.SOLANUM_DB("org.Slycopersicum.eg", "Solanum", dbconn, datacache)
       
     mergeToNamespaceAndExport(ann_objs, pkgname)
     packageStartupMessage(AnnotationDbi:::annoStartupMessages("org.Slycopersicum.eg.db"))
