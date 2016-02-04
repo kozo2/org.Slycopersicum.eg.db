@@ -29,13 +29,7 @@ org.Slycopersicum.egORGANISM <- "Solanum lycopersicum"
 ##     ## Create the AnnObj instances
 ## #    ann_objs <- createAnnObjs.SchemaChoice("ARABIDOPSIS_DB",
 ## #                                           "org.At.tair", "Arabidopsis", dbconn, datacache)
-## #    SOLANUM_DB_L2Rlink1 <- list(tablename="genes", Lcolname="gene_id", Rcolname="_id")
 
-##     seed0 <- list(
-##       objTarget="Solanum",
-##       datacache=datacache
-##     )
-    ## ann_objs <- AnnotationDbi:::createAnnDbBimaps(SOLANUM_DB_AnnDbBimap_seeds, seed0)
     ann_objs <- createAnnObjs.SOLANUM_DB("org.Slycopersicum.eg", "Solanum", dbconn, datacache)
       
     mergeToNamespaceAndExport(ann_objs, pkgname)
