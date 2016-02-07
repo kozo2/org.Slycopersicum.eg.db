@@ -108,7 +108,7 @@ createAnnObjs.SOLANUM_DB <- function(prefix, objTarget, dbconn, datacache)
         objTarget=objTarget,
         datacache=datacache
     )
-    ann_objs <- AnnotationDbi:::createAnnDbBimaps(SOLANUM_DB_AnnDbBimap_seeds, seed0)
+    ann_objs <- AnnotationDbi::createAnnDbBimaps(SOLANUM_DB_AnnDbBimap_seeds, seed0)
 
     ## Reverse maps
     ann_objs$ENZYME2ORF <- revmap(ann_objs$ENZYME, objName="ENZYME2ORF")
@@ -116,7 +116,7 @@ createAnnObjs.SOLANUM_DB <- function(prefix, objTarget, dbconn, datacache)
     ann_objs$SGN2ORF <- revmap(ann_objs$SGN, objName="SGN2ORF")
     ann_objs$ITAG2ORF <- revmap(ann_objs$ITAG, objName="ITAG2ORF")
 
-    ann_objs$MAPCOUNTS <- AnnotationDbi:::createMAPCOUNTS(dbconn, prefix)
+    ann_objs$MAPCOUNTS <- AnnotationDbi::createMAPCOUNTS(dbconn, prefix)
 
-    AnnotationDbi:::prefixAnnObjNames(ann_objs, prefix)
+    AnnotationDbi::prefixAnnObjNames(ann_objs, prefix)
 }
