@@ -12,5 +12,9 @@ export(
     org.Slycopersicum.eg_dbInfo,
 
     org.Slycopersicum.egORGANISM
+
+    createAnnDbBimaps
+    createMAPCOUNTS
+    prefixAnnObjNames
 )
 
