@@ -13,8 +13,8 @@ export(
 
     org.Slycopersicum.egORGANISM
 
-    createAnnDbBimaps
-    createMAPCOUNTS
-    prefixAnnObjNames
+    AnnotationDbi:::createAnnDbBimaps
+    AnnotationDbi:::createMAPCOUNTS
+    AnnotationDbi:::prefixAnnObjNames
 )
 
