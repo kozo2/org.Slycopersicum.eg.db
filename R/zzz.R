@@ -33,7 +33,7 @@ org.Slycopersicum.egORGANISM <- "Solanum lycopersicum"
     ann_objs <- createAnnObjs.SOLANUM_DB("org.Slycopersicum.eg", "Solanum", dbconn, datacache)
       
     mergeToNamespaceAndExport(ann_objs, pkgname)
-    packageStartupMessage(AnnotationDbi:::annoStartupMessages("org.Slycopersicum.eg.db"))
+    #packageStartupMessage(AnnotationDbi:::annoStartupMessages("org.Slycopersicum.eg.db"))
 }
 
 .onUnload <- function(libpath)
