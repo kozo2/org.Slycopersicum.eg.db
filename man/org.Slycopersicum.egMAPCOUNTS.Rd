@@ -27,15 +27,6 @@
 }
 
 \examples{
-  org.Slycopersicum.egMAPCOUNTS
-  mapnames <- names(org.Slycopersicum.egMAPCOUNTS)
-  org.Slycopersicum.egMAPCOUNTS[mapnames[1]]
-  x <- get(mapnames[1])
-  sum(!is.na(as.list(x)))
-  count.mappedkeys(x)   # much faster!
-
-  ## Check the "map count" of all the maps in package org.Slycopersicum.eg.db
-  checkMAPCOUNTS("org.Slycopersicum.eg.db")
 }
 
 \keyword{datasets}
