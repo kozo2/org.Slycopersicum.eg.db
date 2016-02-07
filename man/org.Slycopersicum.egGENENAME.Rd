@@ -22,6 +22,7 @@
 }
 
 \examples{
+  dir()
 }
 \keyword{datasets}
 

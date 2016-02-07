@@ -7,7 +7,9 @@
   entrez gene identifiers and EC numbers.
 }
 \details{
+  foo
 }
 \examples{
+  dir()
 }
 \keyword{datasets}

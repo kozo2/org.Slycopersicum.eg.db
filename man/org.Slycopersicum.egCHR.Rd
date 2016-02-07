@@ -6,7 +6,9 @@
   entrez gene identifiers and the chromosome that contains the gene of interest.
 }
 \details{
+  foo
 }
 \examples{
+  dir()
 }
 \keyword{datasets}
