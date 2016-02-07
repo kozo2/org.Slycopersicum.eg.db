@@ -6,10 +6,11 @@
   identifiers to the corresponding Uniprot. 
 }
 \details{
- 
+  foo
 }
 
 \examples{
+  dir()
 }
 \keyword{datasets}
 

@@ -7,10 +7,11 @@
   identifiers to the corresponding SGN. 
 }
 \details{
- 
+  foo
 }
 
 \examples{
+  dir()
 }
 \keyword{datasets}
 

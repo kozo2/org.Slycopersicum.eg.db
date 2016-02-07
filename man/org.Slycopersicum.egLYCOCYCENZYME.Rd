@@ -6,8 +6,10 @@
   Entrez Gene identifiers and Enzyme Names from LYCOCYC. 
 }
 \details{
+  foo
 }
 \examples{
+  dir()
 }
 \keyword{datasets}
 
