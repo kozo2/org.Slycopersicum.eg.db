@@ -1,0 +1,27 @@
+\name{org.Slycopersicum.egGENENAME}
+\alias{org.Slycopersicum.egGENENAME}
+\title{Map between Entrez Gene IDs and Genes}
+\description{
+  org.Slycopersicum.egGENENAME is an R object that maps entrez gene
+  identifiers to the corresponding gene name.
+}
+\details{
+  Each entrez gene identifier maps to a named vector containing the gene
+  name. The vector name corresponds to the entrez gene identifier. If the 
+  gene name is unknown, the vector will contain an \code{NA}.
+  
+  Gene names currently include both the official (validated by a
+  nomenclature committee) and preferred names (interim selected for
+  display) for genes. Efforts are being made to differentiate the two
+  by adding a name to the vector.
+
+  Mappings were based on data provided by: Entrez Gene  
+  ftp://ftp.ncbi.nlm.nih.gov/gene/DATA  
+  With a date stamp from the source of: 2015-Sep27
+  
+}
+
+\examples{
+}
+\keyword{datasets}
+
