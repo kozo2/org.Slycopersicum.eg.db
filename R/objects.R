@@ -112,7 +112,7 @@ createAnnObjs.SOLANUM_DB <- function(prefix, objTarget, dbconn, datacache)
 
     ## Reverse maps
     ann_objs$ENZYME2ORF <- revmap(ann_objs$ENZYME, objName="ENZYME2ORF")
-    ann_objs$PATH2ORF <- revmap(ann_objs$LYCOCYC, objName="LYCOCYC2ORF")
+    ann_objs$LYCOCYC2ORF <- revmap(ann_objs$LYCOCYC, objName="LYCOCYC2ORF")
     ann_objs$SGN2ORF <- revmap(ann_objs$SGN, objName="SGN2ORF")
     ann_objs$ITAG2ORF <- revmap(ann_objs$ITAG, objName="ITAG2ORF")
 
