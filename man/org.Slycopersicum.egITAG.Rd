@@ -3,7 +3,7 @@
 \alias{org.Slycopersicum.egITAG2ORF.Rd}
 \title{Map between Entrez Gene IDs and ITAG}
 \description{
-  org.Slycopersicum.egGENENAME is an R object that maps entrez gene
+  org.Slycopersicum.egITAG is an R object that maps entrez gene
   identifiers to the corresponding ITAG. 
 }
 \details{
