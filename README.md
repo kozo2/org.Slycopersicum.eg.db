@@ -7,4 +7,5 @@ Genome wide annotation for Tomato
 ```r
 install.packages("devtools")
 devtools::install_github("kozo2/org.Slycopersicum.eg.db")
+library("org.Slycopersicum.eg.db")
 ```
