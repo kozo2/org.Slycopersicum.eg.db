@@ -17,19 +17,15 @@ org.Slycopersicum.egORGANISM <- "Solanum lycopersicum"
     assign("dbconn", dbconn, envir=datacache)
 
     ## Create the OrgDb object
-##     sPkgname <- sub(".db$","",pkgname)
-##     db <- loadDb(system.file("extdata", paste(sPkgname,
-##       ".sqlite",sep=""), package=pkgname, lib.loc=libname),
-##                    packageName=pkgname)    
-##     dbNewname <- AnnotationDbi:::dbObjectName(pkgname,"OrgDb")
-##     ns <- asNamespace(pkgname)
-##     assign(dbNewname, db, envir=ns)
-##     namespaceExport(ns, dbNewname)
-    
-##     ## Create the AnnObj instances
-## #    ann_objs <- createAnnObjs.SchemaChoice("ARABIDOPSIS_DB",
-## #                                           "org.At.tair", "Arabidopsis", dbconn, datacache)
-
+    sPkgname <- sub(".db$","",pkgname)
+    txdb <- loadDb(system.file("extdata", paste(sPkgname,
+      ".sqlite",sep=""), package=pkgname, lib.loc=libname),
+      packageName=pkgname)
+    dbNewname <- AnnotationDbi:::dbObjectName(pkgname,"OrgDb")
+    ns <- asNamespace(pkgname)
+    assign(dbNewname, txdb, envir=ns)
+    namespaceExport(ns, dbNewname)
+     
     ann_objs <- createAnnObjs.SOLANUM_DB("org.Slycopersicum.eg", "Solanum", dbconn, datacache)
       
     mergeToNamespaceAndExport(ann_objs, pkgname)
